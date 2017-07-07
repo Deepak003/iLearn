@@ -1,0 +1,32 @@
+{
+  "author": "Deepak Tiwari [ Emp Id: U43779 ] <deepak.tiwari@ust-global.com>",
+  "name": "Quizzler",
+  "version": "0.0.2",
+  "homepage": "http://ust-global.com/",
+  "bugs": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Deepak003/iLearn.git"
+  },
+  "licenses": {
+    "type": "GPL",
+    "url": "https://github.com/Deepak003/iLearn.git"
+  },
+  "dependencies": {
+    "http-server": "^0.10.0",
+    "latest-version": "^3.1.0",
+    "local-web-server": "^1.2.8",
+    "decompress-zip": "^0.3.0",
+    "express": "4.13.3",
+    "multer": "1.1.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "should": "~7.1.0",
+    "mocha": "~2.3.3",
+    "supertest": "~1.1.0"
+  },
+  "scripts": {
+    "bower": "bower"
+  }
+}

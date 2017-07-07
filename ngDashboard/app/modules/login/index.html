@@ -1,0 +1,62 @@
+<div class="divBody">
+    <div class="login-wrap">
+		<div class="login-html">
+		    <div class="eLearnTitle">iLearn @UST</div>
+			<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+			<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+			<div class="login-form">
+				<div class="sign-in-htm">
+					<form name="vm.loginForm" class="form-horizontal" data-ng-submit="vm.login(vm.getUser);">
+						<div class="group">
+							<label for="user" class="label">Username</label>
+							 <input id="login-username" type="text" class="input" name="username" value="admin" placeholder="Username" data-ng-model="vm.getUser.Username" required>
+						</div>
+						<div class="group">
+							<label for="pass" class="label">Password</label>
+							<input id="login-password" type="password" class="input" name="password" placeholder="Password" data-ng-model="vm.getUser.Password" required value="admin">
+						</div>
+						<div class="group">
+							<input id="check" type="checkbox" class="check" checked>
+							<label for="check"><span class="icon"></span> Keep me Signed in</label>
+						</div>
+						<div class="group">
+							<input type="submit" class="button" value="Sign In">
+						</div>
+						<div class="hr"></div>
+						<div class="foot-lnk">
+							<a href="#forgot">Forgot Password?</a>
+						</div>
+					</form>	
+				</div>
+				<div class="sign-up-htm">
+					<form name="vm.registrationForm" data-ng-submit="vm.register();">
+						<div class="group">
+							<label for="user" class="label">Username</label>
+							<input type="text" class="input" name="lastname" placeholder="Last Name" required data-ng-model="vm.setUser.Username">
+						</div>
+						<div class="group">
+							<label for="pass" class="label">Password</label>
+							<input type="password" class="input" name="password" placeholder="Password" required data-ng-model="vm.setUser.Password">
+						</div>
+						<div class="group">
+							<label for="pass" class="label">Repeat Password</label>
+							<input type="password" class="input" name="cpasswd" placeholder="Confirm Password" required data-ng-model="vm.setUser.confirmPassword">
+						</div>
+						<div class="group">
+							<label for="pass" class="label">Email Address</label>
+							<input type="email" class="input" name="email" placeholder="Email Address" required data-ng-model="vm.setUser.Email">
+						</div>
+						<div class="group">
+							<input type="submit" class="button" value="Sign Up">
+						</div>
+						<div class="hr"></div>
+						<div class="foot-lnk">
+							<label for="tab-1">Already Member?</a>
+						</div>
+					</form>		
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+
