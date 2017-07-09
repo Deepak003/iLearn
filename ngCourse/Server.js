@@ -44,11 +44,24 @@ app.post('/api/photo',function(req,res){
 	upload(req,res,function(err) {
 		if (((req.file.originalname).split('.')[1])=='zip'){
 			var filepath = path.join(req.file.destination, req.file.filename);
+			console.log('__dirname:'+__dirname);
+			console.log('filepath:'+filepath);
 			var unzipper = new Unzipper(filepath);
 			unzipper.on("extract", function () {
 				console.log("Finished extracting");	
 				if(err) {
 				  return res.end(err);
+				}else{
+					var _file = __dirname+'\\'+filepath;
+					console.log('_file::'+_file);
+					fs.unlinkSync(_file);
+					fs.exists(_file, function(exists) {
+						if(exists) {
+							console.log(gutil.colors.green('File still exists....'));
+						} else {
+							console.log('File deleted..');
+						}
+					});
 				}	
             });
             unzipper.extract({path:'./uploads/'});
@@ -59,8 +72,10 @@ app.post('/api/photo',function(req,res){
 		res.end("File is uploaded",function(err){		
 		});
 		jsonfile.writeFile(file1, obj1,function (err) {
+		  console.log('file1:'+file1);
 		  console.log(err);
 		});
+		
 	});	
 });
 app.listen(3000,function(){

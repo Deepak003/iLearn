@@ -92,7 +92,7 @@
                      */
                     loadQuiz = function( quizID )
                     {
-                        $log.debug( supplant( "loadQuiz( quiz ID = {0} )", [ quizID ] ));
+                        $log.debug( supplant( "hello..........loadQuiz( quiz ID = {0} )", [ quizID ] ));
 
                         $log.tryCatch( function()
                         {
