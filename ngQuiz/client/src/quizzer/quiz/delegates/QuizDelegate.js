@@ -36,12 +36,12 @@
                 scoreBuilder = Factory.instanceOf( ScoreBuilder),
 
                 /**
-                 * QuizDelegat
+                 * QuizDelegate
                  * @constructor
                  */
                 QuizDelegate = function ( $http, $q, $log )
                 {
-                   $log = $log.getInstance( "QuizDelegate" );
+                    $log = $log.getInstance( "QuizDelegate" );
 
                         /**
                          * Util function to build a resolved promise;
@@ -66,7 +66,7 @@
                         loadByID = function( quizID )
                         {
                             var LOAD_URL = supplant( QUIZ_TEMPLATE, { id : quizID } );
-                            
+                            $log.debug("quizID::"+quizID);
                              $log.debug(
                                  "loadQuiz( quizID={0} )",
                                  [ quizID ]

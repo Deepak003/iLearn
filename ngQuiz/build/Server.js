@@ -21,7 +21,7 @@ app.get('/',function(req,res){
 app.post('/api/photo',function(req,res){
 	upload(req,res,function(err) {
 		if (((req.file.originalname).split('.')[1])=='zip'){
-			var, filepath = path.join(req.file.destination, req.file.filename);
+			var filepath = path.join(req.file.destination, req.file.filename);
 			var unzipper = new Unzipper(filepath);
 			unzipper.on("extract", function () {
 				console.log("Finished extracting");

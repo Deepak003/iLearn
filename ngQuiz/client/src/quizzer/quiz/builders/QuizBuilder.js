@@ -155,9 +155,7 @@
                                     // Create instance of a Quiz object
 
                                     quiz = {
-
                                         // properties
-
                                         uid            : data.uid,
                                         name           : data.name,
                                         current        : currentQuestion,

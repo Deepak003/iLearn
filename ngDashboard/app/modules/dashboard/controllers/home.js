@@ -1,6 +1,6 @@
 ﻿/*==========================================================
-    Author      : Ranjithprabhu K
-    Date Created: 13 Jan 2016
+    Author      : Deepak Tiwari
+    Date Created: 13 Jan 2017
     Description : Controller to handle Home page
     Change Log
     s.no      date    author     description     
@@ -9,7 +9,8 @@
  ===========================================================*/
 
 dashboard.controller("HomeController", ['$rootScope', '$scope', '$state', '$location', 'dashboardService', 'Flash',
-function ($rootScope, $scope, $state, $location, dashboardService, Flash) {
+function ($rootScope, $window,$scope, $state, $location, dashboardService, Flash) {
+	
     var vm = this;
 
     vm.showDetails = true;
@@ -186,7 +187,35 @@ function ($rootScope, $scope, $state, $location, dashboardService, Flash) {
             progressbar: "blue"
         }
     ];
-
+	
+	
+	
+	var folder = "images/home/";
+    //var divInner = document.getElementById("owl-single").innerHTML;
+	$.ajax({
+		url : folder,
+		success: function (data) {
+			$(data).find("a").attr("href", function (i, val) {
+				console.log('val:'+val);
+				if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+					$("#owl-single.owl-carousel").append( "<div class='item'><img src='"+ val +"'></div>" );
+					//divInner = divInner + "<div class='item'><img src='"+ val +"'></div>";
+					//divInner = divInner + "<div class='item'><img src='"+ val +"'></div>";
+				} 
+			});
+			$(window).load();
+		    //cartoon photo slider carosusel
+			$("#owl-single").owlCarousel({
+				navigation: true, // Show next and prev buttons
+				slideSpeed: 900,
+				paginationSpeed: 400,
+				singleItem: true,
+				autoPlay: 5000,
+				items: 8				//Set AutoPlay to 3 seconds
+			});
+		}
+	});
+	
     //Tools I use Carousel
     $("#owl-demo").owlCarousel({
 
@@ -213,13 +242,6 @@ function ($rootScope, $scope, $state, $location, dashboardService, Flash) {
         $("#owl-demo").trigger('owl.stop');
     })
 
-    //cartoon photo slider carosusel
-    $("#owl-single").owlCarousel({
-        navigation: true, // Show next and prev buttons
-        slideSpeed: 300,
-        paginationSpeed: 400,
-        singleItem: true,
-        autoPlay: 5000, //Set AutoPlay to 3 seconds
-    });
+    
 }]);
 

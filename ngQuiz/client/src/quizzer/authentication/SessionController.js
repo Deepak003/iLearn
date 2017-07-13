@@ -16,12 +16,11 @@
     define( [ 'utils/supplant' ], function ( supplant )
     {
         var VIEW_LOGIN = "/login",
-
             /**
              * SessionController
              * @constructor
              */
-            SessionController = function( session, $rootScope, $log, $location )
+            SessionController = function( session, $rootScope, $log, $location,$window )
             {
                     /**
                      * AutoRouteToLogin()
@@ -37,7 +36,6 @@
                             }
                         }
                     };
-
                 $log = $log.getInstance( "SessionController" );
                 $log.debug( "constructor() ");
 
@@ -65,7 +63,7 @@
 
         // Register as global constructor function
 
-        return [ "session", "$rootScope", "$log", "$location", SessionController ];
+        return [ "session", "$rootScope", "$log", "$location",SessionController ];
 
     });
 

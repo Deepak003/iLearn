@@ -29,8 +29,7 @@
             {
                 $log = $log.getInstance( "TestController" );
                 $log.debug( "constructor() ");
-
-                var quiz = session.quiz,
+                var quiz = session.quiz,	
                     /**
                      * Navigate to and display the next question
                      */
@@ -38,26 +37,19 @@
                     {
                         var question = null,
                             url      = "";
-
                         $log.debug( "nextQuestion( )" );
-
                         // Fail if the user did NOT select an answer ?
-
                         if ( $scope.challenge && ($scope.challenge.selected === undefined) )
                         {
                             $log.warn( ANSWER_NEEDED );
                             $window.alert( ANSWER_NEEDED );
                             return;
                         }
-
                         // Lookup the next question to build and navigate to the URL
-
                         question = quiz.nextQuestion();
                         url      = supplant( VIEW_QUESTION, question );
-
                         $log.debug( "Navigating to the '{0}' view...", [ url ] );
                         $location.path( url );
-
                     },
                     /**
                      * Submit the quiz and answers and build the test score details
@@ -65,7 +57,6 @@
                     submitTest = function()
                     {
                         $log.debug( "submitTest()" );
-
                         $log.tryCatch( function()
                         {
                             return quizDelegate
@@ -164,7 +155,8 @@
 
                 if ( session.sessionID && ( !quiz || quiz.uid != session.selectedQuiz ) )
                 {
-                    loadQuiz( session.selectedQuiz );
+                    $log.debug('session.selectedQuiz ::'+session.selectedQuiz);
+					loadQuiz( session.selectedQuiz );
                 }
 
 

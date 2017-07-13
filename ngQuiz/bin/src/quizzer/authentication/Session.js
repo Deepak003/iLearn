@@ -30,7 +30,7 @@
 
                 _session.quiz                   = undefined;
                 _session.score                  = undefined;
-                _session.selectedQuiz           = 1;
+                _session.selectedQuiz           = 2;
 
                 return _session;
             },
@@ -45,7 +45,7 @@
                 clear             : onClear,
                 logout            : onClear,
 
-                selectedQuiz      : 1
+                selectedQuiz      : 2
             };
 
 

@@ -1,5 +1,5 @@
 ﻿/*==========================================================
-    Author      : Ranjithprabhu K
+    Author      : Deepak Tiwari
     Date Created: 24 Dec 2015
     Description : Controller to handle main application
     
@@ -117,27 +117,12 @@ function ($rootScope, $scope, $state, $location, Flash,appSettings) {
             state: "dashboard"
         },
         {
-            title: "Skills",
+            title: "Skills & Quizzes",
             icon: "gears",
             state: "skills"
         },
         {
-            title: "Education",
-            icon: "graduation-cap",
-            state: "education"
-        },
-        {
-            title: "Experience",
-            icon: "suitcase",
-            state: "experience"
-        },
-        {
-            title: "Recent Projects",
-            icon: "file-code-o",
-            state: "recent"
-        },
-        {
-            title: "Websites",
+            title: "Courses",
             icon: "globe",
             state: "websites"
         },
@@ -145,16 +130,6 @@ function ($rootScope, $scope, $state, $location, Flash,appSettings) {
             title: "Portfolio",
             icon: "anchor",
             state: "portfolio"
-        },
-        {
-            title: "About Me",
-            icon: "user-secret",
-            state: "about"
-        },
-        {
-            title: "Contact",
-            icon: "phone",
-            state: "contact"
         }
     ];
 

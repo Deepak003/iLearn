@@ -1,6 +1,6 @@
 ﻿/*==========================================================
-    Author      : Ranjithprabhu K
-    Date Created: 13 Jan 2016
+    Author      : Deepak Tiwari
+    Date Created: 13 Jan 2017
     Description : Controller to handle Skills page
     Change Log
     s.no      date    author     description     
@@ -8,8 +8,8 @@
 
  ===========================================================*/
 
-dashboard.controller("SkillController", ['$rootScope', '$scope', '$state', '$location', 'dashboardService', 'Flash',
-function ($rootScope, $scope, $state, $location, dashboardService, Flash) {
+dashboard.controller("SkillController", ['$rootScope', '$scope', '$window','$state', '$location', 'dashboardService', 'Flash',
+function ($rootScope, $scope, $window,$state, $location, dashboardService, Flash) {
     var vm = this;
 
     vm.skills = {};
@@ -139,5 +139,13 @@ function ($rootScope, $scope, $state, $location, dashboardService, Flash) {
             image: "cloud"
         }
     ];
+	
+	vm.openQuiz = function(quizId){
+		//alert("hi");
+		$scope.quizId = quizId;
+		var left = (screen.width/2);
+        var top = (screen.height/2);
+		$window.open("../ngQuiz/client/index.html", '_blank', 'location=yes,height=600,width=500,scrollbars=no,status=yes','top="+top+"','left="+left+"');
+	};
 }]);
 

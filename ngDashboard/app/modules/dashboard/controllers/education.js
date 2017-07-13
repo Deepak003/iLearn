@@ -1,6 +1,6 @@
 ﻿/*==========================================================
-    Author      : Ranjithprabhu K
-    Date Created: 13 Jan 2016
+    Author      : Deepak Tiwari
+    Date Created: 13 Jan 2017
     Description : Controller to handle Education page
     Change Log
     s.no      date    author     description     

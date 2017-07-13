@@ -65,7 +65,8 @@
                          */
                         loadByID = function( quizID )
                         {
-                            var LOAD_URL = supplant( QUIZ_TEMPLATE, { id : quizID } );
+                            
+							var LOAD_URL = supplant( QUIZ_TEMPLATE, { id : quizID } );
                             
                              $log.debug(
                                  "loadQuiz( quizID={0} )",
