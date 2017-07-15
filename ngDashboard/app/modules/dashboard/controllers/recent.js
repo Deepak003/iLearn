@@ -78,7 +78,7 @@ function ($rootScope, $scope, $state, $location, dashboardService, Flash) {
           description: "Angular Bootstrap Dashboard is a web dashboard application based on Bootstrap and AngularJS.",
           image: "dashboard",
           theme: "success",
-          url: "dashboard.ranjithprabhu.in",
+          url: "dashboard.Deepak.in",
           roles: [
               {
                   theme: "success",
