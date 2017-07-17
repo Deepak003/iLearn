@@ -27,16 +27,16 @@
                      * AutoRouteToLogin()
                      */
                 var validateSession = function()
-                    {
-                        if ( session && !session.sessionID )
-                        {
-                            if ( $location.path() != VIEW_LOGIN )
-                            {
-                                $log.debug( "session is invalid - routing to '{0}' ", [ VIEW_LOGIN ] );
-                                $location.path( VIEW_LOGIN );
-                            }
-                        }
-                    };
+				{
+					if ( session && !session.sessionID )
+					{
+						if ( $location.path() != VIEW_LOGIN )
+						{
+							$log.debug( "session is invalid - routing to '{0}' ", [ VIEW_LOGIN ] );
+							$location.path( VIEW_LOGIN );
+						}
+					}
+				};
 
                 $log = $log.getInstance( "SessionController" );
                 $log.debug( "constructor() ");

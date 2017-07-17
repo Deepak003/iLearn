@@ -20,7 +20,7 @@ app.config(['$stateProvider', '$locationProvider', '$urlRouterProvider', functio
     $stateProvider
        .state('app', {
            url: '/app',
-           templateUrl: 'app/common/app.html',
+           templateUrl: 'ngDashboard/app/common/app.html',
            controller: 'appCtrl',
            controllerAs: 'vm',
            data: {

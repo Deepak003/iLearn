@@ -142,7 +142,7 @@ function ($rootScope, $scope, $window,$state, $location, dashboardService, Flash
 	
 	vm.openQuiz = function(quizId){
 		//alert("hi");
-		$scope.quizId = quizId;
+		$window.quizId = quizId;
 		var left = (screen.width/2);
         var top = (screen.height/2);
 		$window.open("../ngQuiz/client/index.html", '_blank', 'location=yes,height=600,width=500,scrollbars=no,status=yes','top="+top+"','left="+left+"');

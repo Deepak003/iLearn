@@ -190,7 +190,7 @@ function ($rootScope, $window,$scope, $state, $location, dashboardService, Flash
 	
 	
 	
-	var folder = "images/home/";
+	var folder = "ngDashboard/images/home/";
     //var divInner = document.getElementById("owl-single").innerHTML;
 	$.ajax({
 		url : folder,
