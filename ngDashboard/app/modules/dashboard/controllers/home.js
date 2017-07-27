@@ -188,24 +188,7 @@ function ($rootScope, $window,$scope, $state, $location, dashboardService, Flash
         }
     ];
 	
-	
-	
-	var folder = "ngDashboard/images/home/";
-    //var divInner = document.getElementById("owl-single").innerHTML;
-	$.ajax({
-		url : folder,
-		success: function (data) {
-			$(data).find("a").attr("href", function (i, val) {
-				console.log('val:'+val);
-				if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-					$("#owl-single.owl-carousel").append( "<div class='item'><img src='"+ val +"'></div>" );
-					//divInner = divInner + "<div class='item'><img src='"+ val +"'></div>";
-					//divInner = divInner + "<div class='item'><img src='"+ val +"'></div>";
-				} 
-			});
-			$(window).load();
-		    //cartoon photo slider carosusel
-			$("#owl-single").owlCarousel({
+	$("#owl-single").owlCarousel({
 				navigation: true, // Show next and prev buttons
 				slideSpeed: 900,
 				paginationSpeed: 400,
@@ -213,10 +196,9 @@ function ($rootScope, $window,$scope, $state, $location, dashboardService, Flash
 				autoPlay: 5000,
 				items: 8				//Set AutoPlay to 3 seconds
 			});
-		}
-	});
-	
+			
     //Tools I use Carousel
+	
     $("#owl-demo").owlCarousel({
 
 
@@ -226,6 +208,7 @@ function ($rootScope, $window,$scope, $state, $location, dashboardService, Flash
         itemsTablet: [600, 2], //2 items between 600 and 0
         itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
     });
+	
     $("#owl-demo").trigger('owl.play', 2000);
 
     // Custom Navigation Events
