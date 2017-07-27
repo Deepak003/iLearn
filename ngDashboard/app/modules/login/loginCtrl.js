@@ -29,7 +29,7 @@ function ($rootScope, $scope, $state, $location, loginService, Flash, apiService
             /*}
             else
                 Flash.create('danger', 'Invalid Username', 'large-text');*/
-			$state.go('app.dashboard');
+			//$state.go('app.dashboard');
         };
 
         //get registration details
