@@ -25,7 +25,7 @@
                     /**
                      * AutoRouteToLogin()
                      */
-				alert(window.opener.quizId);	 
+				//alert(window.opener.quizId);	 
                 var validateSession = function()
                     {
                         if ( session && !session.sessionID )

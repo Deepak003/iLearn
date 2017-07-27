@@ -26,7 +26,7 @@ function ($rootScope, $scope, $state,$window, $location, dashboardService, Flash
     ];
     console.log("coming to Websites controller");
 	vm.openCourse = function(courseLnk){
-		alert(courseLnk);
+		//alert(courseLnk);
 		var left = (screen.width/2);
         var top = (screen.height/2);
 		$window.open(courseLnk, '_blank', 'location=yes,height=700,width=700,scrollbars=no,status=yes','top="+top+"','left="+left+"');
