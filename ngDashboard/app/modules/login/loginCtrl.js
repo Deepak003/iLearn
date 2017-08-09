@@ -19,7 +19,7 @@ function ($rootScope, $scope, $state, $location, loginService, Flash, apiService
         //access login
         vm.login = function (data) {
 			$rootScope.userName = data.Username;
-			alert($rootScope.userName);
+			//alert($rootScope.userName);
             //if (data.Username == "admin") {
                 if (data.Password == "admin") {
                     $state.go('app.dashboard');
@@ -29,7 +29,7 @@ function ($rootScope, $scope, $state, $location, loginService, Flash, apiService
             /*}
             else
                 Flash.create('danger', 'Invalid Username', 'large-text');*/
-			$state.go('app.dashboard');
+			//$state.go('app.dashboard');
         };
 
         //get registration details

@@ -6,7 +6,7 @@ Date: 13 Jan 2017
 
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Development Stack</h1>
+        <h1>Development Stack - Click on Images to Launch Quizes</h1>
         <ol class="breadcrumb">
             <li><a><i class="fa fa-dashboard"></i> Dashboard</a></li>
             <li class="active">Skills</li>
@@ -18,13 +18,15 @@ Date: 13 Jan 2017
             <div class="col-lg-3 col-xs-6" data-ng-repeat="skill in vm.skills.development">
                 <!-- small box -->
                 <div class="small-box bg-{{skill.theme}}-gradient">
-                    <div class="inner">
-                        <h3>{{skill.Percentage}}<small class="text-black">%</small></h3>
-                        <p class="text-bold">{{skill.Software}}</p>
-                    </div>
-                    <div class="icon">
-                       <i class="fa"><a data-ng-click="vm.openQuiz(1);"><img src="../../../../ngDashboard/images/icons/{{skill.image}}.png" class="img-responsive" width="70" /></a></i>
-                    </div>
+                    <a data-ng-click="vm.openQuiz(2);">
+						<div class="inner">
+							<h3>{{skill.Percentage}}<small class="text-black">%</small></h3>
+							<p class="text-bold">{{skill.Software}}</p>
+						</div>
+						<div class="icon">
+						   <i class="fa"><img src="../../../../ngDashboard/images/icons/{{skill.image}}.png" class="img-responsive" width="70" /></i>
+						</div>
+					</a>
                     <div class="progress progress-sm active">
                         <div class="progress-bar progress-bar-{{skill.theme}} progress-bar-striped" role="progressbar" aria-valuenow="{{skill.Percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{skill.Percentage}}%">
                         </div>
@@ -35,21 +37,23 @@ Date: 13 Jan 2017
     </section>
 
     <section class="content-header">
-        <h1>Design Stack</h1>
+        <h1>Design Stack - Click on Images to Launch Quizes</h1>
     </section>
     <!-- Design content -->
     <section class="content">
         <div class="row">
             <div class="col-lg-3 col-xs-6" data-ng-repeat="skill in vm.skills.design">
                 <!-- small box -->
-                <div class="small-box bg-{{skill.theme}}-gradient">
-                    <div class="inner">
-                        <h3>{{skill.Percentage}}<small class="text-black">%</small></h3>
-                        <p class="text-bold">{{skill.Software}}</p>
-                    </div>
-                    <div class="icon">
-                       <i class="fa"><a data-ng-click="vm.openQuiz(2);"><img src="../../../../ngDashboard/images/icons/{{skill.image}}.png" class="img-responsive" width="70" /></a></i>
-                    </div>
+                <div class="small-box bg-{{skill.theme}}-gradient">   
+					<a data-ng-click="vm.openQuiz(2);">
+						<div class="inner">
+							<h3>{{skill.Percentage}}<small class="text-black">%</small></h3>
+							<p class="text-bold">{{skill.Software}}</p>
+						</div>
+						<div class="icon">
+						   <i class="fa"><img src="../../../../ngDashboard/images/icons/{{skill.image}}.png" class="img-responsive" width="70" /></i>
+						</div>
+					</a>	
                     <div class="progress progress-sm active">
                         <div class="progress-bar progress-bar-{{skill.theme}} progress-bar-striped" role="progressbar" aria-valuenow="{{skill.Percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{skill.Percentage}}%">
                         </div>
@@ -60,7 +64,7 @@ Date: 13 Jan 2017
     </section>
 
 <section class="content-header">
-    <h1>Others</h1>
+    <h1>Others - Click on Images to Launch Quizes</h1>
 </section>
 <!-- Others -->
 <section class="content">
@@ -68,13 +72,15 @@ Date: 13 Jan 2017
         <div class="col-lg-3 col-xs-6" data-ng-repeat="skill in vm.skills.others">
             <!-- small box -->
             <div class="small-box bg-{{skill.theme}}-gradient">
-                <div class="inner">
-                    <h3>{{skill.Percentage}}<small class="text-black">%</small></h3>
-                    <p class="text-bold">{{skill.Software}}</p>
-                </div>
-                <div class="icon">
-                    <i class="fa"><a data-ng-click="vm.openQuiz(3);"><img src="../../../../ngDashboard/images/icons/{{skill.image}}.png" class="img-responsive" width="70" /></a></i>
-                </div>
+                <a data-ng-click="vm.openQuiz(2);">
+						<div class="inner">
+							<h3>{{skill.Percentage}}<small class="text-black">%</small></h3>
+							<p class="text-bold">{{skill.Software}}</p>
+						</div>
+						<div class="icon">
+						   <i class="fa"><img src="../../../../ngDashboard/images/icons/{{skill.image}}.png" class="img-responsive" width="70" /></i>
+						</div>
+				</a>
                 <div class="progress progress-sm active">
                     <div class="progress-bar progress-bar-{{skill.theme}} progress-bar-striped" role="progressbar" aria-valuenow="{{skill.Percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{skill.Percentage}}%">
                     </div>

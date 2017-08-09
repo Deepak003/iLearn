@@ -14,7 +14,7 @@ function ($rootScope, $scope, $state, $location, Flash,appSettings) {
     $rootScope.layout = appSettings.layout;
 
     var vm = this;
-    alert($rootScope.userName);
+    //alert($rootScope.userName);
     vm.user=$rootScope.userName;
     //avalilable themes
     vm.themes = [
