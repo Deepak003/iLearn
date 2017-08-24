@@ -5,7 +5,7 @@ var multer	=	require('multer');
 var Unzipper = require("decompress-zip");
 var jsonfile = require('jsonfile');
 var file1 = __dirname+'/uploads/list-of-courses.json';
-var _objCourse = {'name': '','url':''};
+var _objCourse = {'name': '','url':'','date_time_stamp':''};
 var obj1=[];
 var app	=	express();
  
