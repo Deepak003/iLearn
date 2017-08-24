@@ -9,29 +9,59 @@ var _objCourse = {'name': '','url':''};
 var obj1=[];
 var app	=	express();
  
+function formatAMPM(date) {
+    // gets the hours
+    var hours = date.getHours();
+    // gets the day
+    var days = date.getDay();
+    // gets the month
+    var minutes = date.getMinutes();
+    // gets AM/PM
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    // converts hours to 12 hour instead of 24 hour
+    hours = hours % 12;
+    // converts 0 (midnight) to 12
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    // converts minutes to have leading 0
+    minutes = minutes < 10 ? '0'+ minutes : minutes;
+  
+    // the time string
+    var time = hours + ':' + minutes + ' ' + ampm;
+  
+    // gets the match for the date string we want
+    var match = date.toString().match(/\w{3} \w{3} \d{1,2} \d{4}/);
+  
+    //the result
+    return match[0] + ' ' + time;
+} 
+ 
 var storage	=	multer.diskStorage({
   destination: function (req, file, callback) {
     callback(null, './uploads');
   },
   filename: function (req, file, callback) {
 	console.log(file.originalname);
+	
 	_objCourse['name'] =((file.originalname).split('.')[0]);
 	_objCourse['url'] = '/ngCourse/uploads/' + _objCourse['name'];
+	_objCourse['date_time_stamp'] = formatAMPM(new Date());
 	fs.readFile(file1, 'utf8', function (err,data) {
-	if (err) {
-	  return console.log(err);
-	}
-	if(data!=null){
-		data = data.replace('}{','},{');
-		data = '['+data+']';
-		data = data.replace('[[','[');
-		data = data.replace('[\n[','[');
-		data = data.replace(']]',']');
-		data = data.replace(']\n]',']');
-		obj1 = JSON.parse(data);
-		obj1.push(_objCourse);
-	}
-    });
+		if (err) {
+		  return console.log(err);
+		}
+		if(data!=null){
+			if(data.length==0){
+				data = data.replace('}{','},{');
+				data = '['+data+']';
+				data = data.replace('[[','[');
+				data = data.replace('[\n[','[');
+				data = data.replace(']]',']');
+				data = data.replace(']\n]',']');
+			}
+			obj1 = JSON.parse(data);
+		    obj1.push(_objCourse);
+		}
+	});
     callback(null, Date.now()+'_'+file.originalname);
   }
 });
