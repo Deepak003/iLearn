@@ -1,14 +1,15 @@
 <html>
   <head>
-    <title>File upload Node.</title>
+    <title>Quiz Upload Node.</title>
   </head>
   <body>
       <form id="uploadForm"
           enctype="multipart/form-data"
           action="/api/photo"
           method="post">
+	  <h4>	Quiz Upload </h4>  
       <input type="file" name="userFile" />
-      <input type="submit" value="Upload Image" name="submit">
+      <input type="submit" value="Upload Quiz" name="submit">
       <span id = "status"></span>
     </form>
   </body>

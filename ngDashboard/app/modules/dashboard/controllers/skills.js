@@ -29,12 +29,6 @@ function ($rootScope, $scope, $window,$state, $location, dashboardService, Flash
             image: "express"
         },
         {
-            Software: "Angular JS",
-            Percentage: "85",
-            theme: "green",
-            image: "angular"
-        },
-        {
             Software: "Node JS",
             Percentage: "83",
             theme: "purple",
@@ -68,6 +62,12 @@ function ($rootScope, $scope, $window,$state, $location, dashboardService, Flash
 
     //Design Stack
     vm.skills.design = [
+	    {
+            Software: "Angular JS",
+            Percentage: "85",
+            theme: "green",
+            image: "angular"
+        },
         {
             Software: "HTML 5",
             Percentage: "90",

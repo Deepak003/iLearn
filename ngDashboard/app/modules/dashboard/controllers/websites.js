@@ -8,9 +8,14 @@
 
  ===========================================================*/
 
-dashboard.controller("WebsitesController", ['$rootScope', '$scope', '$state', '$window','$location', 'dashboardService', 'Flash',
-function ($rootScope, $scope, $state,$window, $location, dashboardService, Flash) {
+dashboard.controller("WebsitesController", ['$http','$rootScope', '$scope', '$state', '$window','$location', 'dashboardService', 'Flash',
+function ($http,$rootScope, $scope, $state,$window, $location, dashboardService, Flash) {
     var vm = this;
+	$http.get('../ngCourse/uploads/list-of-courses.json').success(function (data){
+	  console.log(JSON.stringify(data));
+	  vm.courses =JSON.parse(JSON.stringify(data));
+		//obj1.push(_objCourse);
+	});
 
     vm.websites = [
         {

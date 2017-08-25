@@ -7,22 +7,23 @@ Date: 05 Jan 2017
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Websites
+            Courses For You
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li class="active">Websites</li>
+            <li class="active">Courses</li>
         </ol>
     </section>
     <!-- Main content -->
     <section class="content">
         <!-- Info boxes -->
         <div class="row">
-            <a class="col-md-4 col-sm-6 col-xs-12" ng-repeat="web in vm.websites" data-ng-click="vm.openCourse(web.link);" href target="_blank">
+            <a class="col-md-4 col-sm-6 col-xs-12" ng-repeat="web in vm.courses" data-ng-click="vm.openCourse(web.url);" href target="_blank">
                 <div class="box">
-                    <img src="../../../../ngDashboard/images/websites/{{web.image}}.png" class="img-responsive" />
-                    <h4 class="website-text">{{web.title}}</h4>
+                    <img src="{{web.thumbnail}}" class="img-responsive" style="padding-left: 18%;"/>
+					<h4 class="website-text">{{web.name}}</h4>
                 </div>
+				
             </a>
         </div>    
     </section><!-- /.content -->

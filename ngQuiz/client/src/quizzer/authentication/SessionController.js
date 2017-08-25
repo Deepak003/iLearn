@@ -26,6 +26,8 @@
                      * AutoRouteToLogin()
                      */
 				//alert(window.opener.quizId);	 
+				session.selectedQuiz=window.opener.quizId;
+				$rootScope.selectedQuiz=window.opener.quizId;
                 var validateSession = function()
                     {
                         if ( session && !session.sessionID )

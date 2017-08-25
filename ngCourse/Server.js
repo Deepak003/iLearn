@@ -5,8 +5,8 @@ var multer	=	require('multer');
 var Unzipper = require("decompress-zip");
 var jsonfile = require('jsonfile');
 var file1 = __dirname+'/uploads/list-of-courses.json';
-var _objCourse = {'name': '','url':''};
-var obj1=[];
+var _objCourse = {'name': '','url':'','date_time_stamp':''};
+var obj1;
 var app	=	express();
  
 var storage	=	multer.diskStorage({
@@ -14,20 +14,32 @@ var storage	=	multer.diskStorage({
     callback(null, './uploads');
   },
   filename: function (req, file, callback) {
+	  console.log("hi15");
 	console.log(file.originalname);
-	_objCourse['name'] =((file.originalname).split('.')[0]);
-	_objCourse['url'] = '/ngCourse/uploads/' + _objCourse['name'];
+	var date = new Date();
+	var dtstr = date.toDateString();
+	var time = date.toLocaleTimeString();
+    var date_time_stamp = dtstr + ' ' + time;
+	_objCourse['name'] =(((file.originalname).split('.')[0]).split('_')[1]);
+	_objCourse['url'] = '../ngCourse/uploads/' + ((file.originalname).split('.')[0]);
+	_objCourse['date_time_stamp'] = date_time_stamp;
+	_objCourse['thumbnail'] = _objCourse['url']+'/thumbnails/1.jpg';
 	fs.readFile(file1, 'utf8', function (err,data) {
+		console.log("hi16");
 	if (err) {
 	  return console.log(err);
 	}
 	if(data!=null){
-		data = data.replace('}{','},{');
-		data = '['+data+']';
-		data = data.replace('[[','[');
-		data = data.replace('[\n[','[');
-		data = data.replace(']]',']');
-		data = data.replace(']\n]',']');
+		if((JSON.stringify(data)).trim().length==2)
+		{
+			console.log("hi77::"+(JSON.stringify(data)).trim().length);
+			data = data.replace('}{','},{');
+			data = '['+data+']';
+			data = data.replace('[[','[');
+			data = data.replace('[\n[','[');
+			data = data.replace(']]',']');
+			data = data.replace(']\n]',']');
+		}
 		obj1 = JSON.parse(data);
 		obj1.push(_objCourse);
 	}
@@ -38,11 +50,15 @@ var storage	=	multer.diskStorage({
 
 var upload = multer({ storage : storage}).single('userFile');
 app.get('/',function(req,res){
+	  console.log("hi11");
       res.sendFile(__dirname + "/index.html");
 });
 app.post('/api/photo',function(req,res){
+	console.log("hi12");
 	upload(req,res,function(err) {
+		console.log("hi13");
 		if (((req.file.originalname).split('.')[1])=='zip'){
+			console.log("hi14");
 			var filepath = path.join(req.file.destination, req.file.filename);
 			console.log('__dirname:'+__dirname);
 			console.log('filepath:'+filepath);
