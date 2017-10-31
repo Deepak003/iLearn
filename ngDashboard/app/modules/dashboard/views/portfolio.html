@@ -7,7 +7,7 @@
 		<!-- Content Header (Page header) -->
 		<section class="content-header">
 			<h1>
-			   i-Mentor
+			   i-Mentor - Check how the coach judges your sentiment. 
 
 			</h1>
 			<ol class="breadcrumb">
@@ -27,10 +27,11 @@
 					<div class="progress" id="testResultsBar"></div>
 				</div>
     
-			<p>Test your own:</p>
-				<textarea id="testBox" data-ng-model="vm.chat" placeholder="eg: The director is a master at manupulating your emotions, making you laugh and cry."></textarea>
+			<p><i>Note : This will be used as an important learning criteria in selcting courses for students and also recording their preferences. This uses machine learning Stemmer Algo.
+			</i></p>
+				<div style="display:none"><textarea id="testBox" data-ng-model="vm.chat" placeholder="eg: The director is a master at manupulating your emotions, making you laugh and cry."></textarea>
 				<button id="testButton">Guess Sentiment</button>
-			<p id="testResult" style="display:none;">Guess: <span id="testResultLabel"></span> (<span id="testResultProbability"></span>% probability)</p>
+			<p id="testResult" style="display:none;">Guess: <span id="testResultLabel"></span> (<span id="testResultProbability"></span>% probability)</p></div>
 		</section>
 		<section class="content">
 			<div class="no-touch">
@@ -49,49 +50,7 @@
 							<!-- Conversations are loaded here -->
 							<div class="direct-chat-messages" id="iChatDivId">
 								<!-- Message. Default to the left -->
-								<div class="direct-chat-msg">
-									<div class="direct-chat-info clearfix">
-										<span class="direct-chat-name pull-left">Deepak Tiwari</span>
-										<span class="direct-chat-timestamp pull-right">30 Oct 1017 2:00 pm</span>
-									</div><!-- /.direct-chat-info -->
-									<img class="direct-chat-img" src="../../../../ngDashboard/images/user-pic/{{vm.user}}.jpg" alt="message user image"><!-- /.direct-chat-img -->
-									<div class="direct-chat-text">
-										Is this template really for free? That's unbelievable!
-									</div><!-- /.direct-chat-text -->
-								</div><!-- /.direct-chat-msg -->
-								<!-- Message to the right -->
-								<div class="direct-chat-msg right">
-									<div class="direct-chat-info clearfix">
-										<span class="direct-chat-name pull-right">iMentor</span>
-										<span class="direct-chat-timestamp pull-left">30 Oct 1017 2:05 pm</span>
-									</div><!-- /.direct-chat-info -->
-									<img class="direct-chat-img" src="../../../../ngDashboard/images/user-pic/iMentor.jpg" alt="message user image"><!-- /.direct-chat-img -->
-									<div class="direct-chat-text">
-										You better believe it!
-									</div><!-- /.direct-chat-text -->
-								</div><!-- /.direct-chat-msg -->
-								<!-- Message. Default to the left -->
-								<div class="direct-chat-msg">
-									<div class="direct-chat-info clearfix">
-										<span class="direct-chat-name pull-left">Deepak Tiwari</span>
-										<span class="direct-chat-timestamp pull-right">30 Oct 1017 5:37 pm</span>
-									</div><!-- /.direct-chat-info -->
-									<img class="direct-chat-img" src="../../../../ngDashboard/images/user-pic/{{vm.user}}.jpg" alt="message user image"><!-- /.direct-chat-img -->
-									<div class="direct-chat-text">
-										Working with AdminLTE on a great new app! Wanna join?
-									</div><!-- /.direct-chat-text -->
-								</div><!-- /.direct-chat-msg -->
-								<!-- Message to the right -->
-								<div class="direct-chat-msg right">
-									<div class="direct-chat-info clearfix">
-										<span class="direct-chat-name pull-right">iMentor</span>
-										<span class="direct-chat-timestamp pull-left">30 Oct 1017 6:10 pm</span>
-									</div><!-- /.direct-chat-info -->
-									<img class="direct-chat-img" src="../../../../ngDashboard/images/user-pic/iMentor.jpg" alt="message user image"><!-- /.direct-chat-img -->
-									<div class="direct-chat-text">
-										I would love to.
-									</div><!-- /.direct-chat-text -->
-								</div><!-- /.direct-chat-msg -->
+								
 							</div><!--/.direct-chat-messages-->
 							<!-- Contacts are loaded here -->
 							
@@ -101,7 +60,7 @@
 								<div class="input-group">
 									<input type="text" name="message" data-ng-model="vm.chat" placeholder="Type Message ..." class="form-control">
 									<span class="input-group-btn">
-										<button type="button" class="btn btn-warning btn-flat" data-ng-click="vm.addChat();">Send</button>
+										<button  type="button" class="btn btn-warning btn-flat" data-ng-click="vm.addChat();">Send</button>
 									</span>
 								</div>
 							</form>

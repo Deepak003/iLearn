@@ -16,7 +16,7 @@ function ($rootScope, $scope, $state, $location, Flash,appSettings) {
     var vm = this;
     //alert($rootScope.userName);
     vm.user=$rootScope.userName;
-	
+	$rootScope.globalSearch =vm.globalSearch;
     //avalilable themes
     vm.themes = [
         {
@@ -128,9 +128,14 @@ function ($rootScope, $scope, $state, $location, Flash,appSettings) {
             state: "websites"
         },
         {
-            title: "iMentor",
+            title: "iMentor (ML)",
             icon: "laptop",
             state: "portfolio"
+        },
+        {
+            title: "Relevance Search(ML)",
+            icon: "clipboard",
+            state: "search"
         }
     ];
 
@@ -166,6 +171,7 @@ function ($rootScope, $scope, $state, $location, Flash,appSettings) {
 
     //navigate to search page
     vm.search = function () {
+		$rootScope.globalSearch =vm.globalSearch;
         $state.go('app.search');
     };
 

@@ -25,7 +25,14 @@ function ($rootScope, $scope, $state, $location, dashboardService, Flash) {
     ];
     console.log("coming to Portfolio controller");
 	vm.addChat = function(){
-		alert(vm.chat);
+		//alert(vm.chat);
+		var text = document.getElementById("testBox").value;
+		var result = Bayes.extractWinner(Bayes.guess(text));
+		document.getElementById("testBox").value = '';
+		document.getElementById("testResultLabel").innerHTML = result.label;
+		document.getElementById("testResultProbability").innerHTML = Math.round(100*result.score);
+		document.getElementById("testResult").style.display = 'block';
+		
 		var _oldHtml= document.getElementById("iChatDivId").innerHTML;
 		var _newHtml  = "<div class='direct-chat-msg'><div class='direct-chat-info clearfix'><span class='direct-chat-name pull-left'>{{vm.user}}</span><span class='direct-chat-timestamp pull-right'>30 Oct 1017 2:00 pm</span></div><img class='direct-chat-img' src=## alt='message user image'><div class='direct-chat-text'>{{vm.chat}}</div></div>";
 		_newHtml = _newHtml.replace('{{vm.user}}',vm.user);
@@ -33,7 +40,17 @@ function ($rootScope, $scope, $state, $location, dashboardService, Flash) {
 		var img = "../../../../ngDashboard/images/user-pic/"+vm.user+".jpg";
 		_newHtml = _newHtml.replace('##',img);
 		
-		document.getElementById("iChatDivId").innerHTML= _oldHtml + _newHtml;
+		var _newHtmlMentor  = "<div class='direct-chat-msg right'><div class='direct-chat-info clearfix'><span class='direct-chat-name pull-right'>iMentor</span><span class='direct-chat-timestamp pull-left'>30 Oct 1017 2:00 pm</span></div><img class='direct-chat-img' src=## alt='message user image'><div class='direct-chat-text'>{{vm.chat}}</div></div>";
+		var _imgMentor = "../../../../ngDashboard/images/user-pic/iMentor.jpg";
+		
+		var str= "Guess: "+document.getElementById("testResultLabel").innerHTML + " "+document.getElementById("testResultProbability").innerHTML +" %probability";
+		_newHtmlMentor = _newHtmlMentor.replace('{{vm.chat}}',str);
+		
+		
+		_newHtmlMentor = _newHtmlMentor.replace('##',_imgMentor);
+		document.getElementById("iChatDivId").innerHTML= _oldHtml + _newHtml + _newHtmlMentor;
+		
+		
 		//var left = (screen.width/2);
         //var top = (screen.height/2);
 		//$window.open(courseLnk, '_blank', 'location=yes,height=700,width=700,scrollbars=no,status=yes','top="+top+"','left="+left+"');
