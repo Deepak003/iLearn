@@ -90,6 +90,7 @@ dashboard.config(["$stateProvider", function ($stateProvider) {
             pageTitle: 'Portfolio'
         }
     });
+	
 
     //About Me page state
     $stateProvider.state('app.about', {

@@ -16,6 +16,7 @@ function ($rootScope, $scope, $state, $location, Flash,appSettings) {
     var vm = this;
     //alert($rootScope.userName);
     vm.user=$rootScope.userName;
+	
     //avalilable themes
     vm.themes = [
         {
@@ -127,8 +128,8 @@ function ($rootScope, $scope, $state, $location, Flash,appSettings) {
             state: "websites"
         },
         {
-            title: "Portfolio",
-            icon: "anchor",
+            title: "iMentor",
+            icon: "laptop",
             state: "portfolio"
         }
     ];

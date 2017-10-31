@@ -1,4 +1,4 @@
-The MIT License (MIT)
+UST Global Inc
 
 Copyright (c) 2016 Angular
 
