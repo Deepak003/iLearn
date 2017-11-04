@@ -81,7 +81,7 @@ dashboard.config(["$stateProvider", function ($stateProvider) {
     });
 
     // Portfolio page state
-    /* $stateProvider.state('app.portfolio', {
+     $stateProvider.state('app.portfolio', {
         url: '/portfolio',
         templateUrl: 'ngDashboard/app/modules/dashboard/views/portfolio.html',
         controller: 'PortfolioController',
@@ -89,7 +89,7 @@ dashboard.config(["$stateProvider", function ($stateProvider) {
         data: {
             pageTitle: 'Portfolio'
         }
-    }); */
+    }); 
 	
 
     //About Me page state
@@ -137,7 +137,7 @@ dashboard.config(["$stateProvider", function ($stateProvider) {
     });
 
     //Search page state
-    /* $stateProvider.state('app.search', {
+     $stateProvider.state('app.search', {
         url: '/search',
         templateUrl: 'ngDashboard/app/modules/dashboard/views/search.html',
         controller: 'appCtrl',
@@ -145,7 +145,7 @@ dashboard.config(["$stateProvider", function ($stateProvider) {
         data: {
             pageTitle: 'Search'
         }
-    }); */
+    }); 
 
 }]);
 
