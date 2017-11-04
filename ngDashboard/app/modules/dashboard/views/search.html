@@ -32,52 +32,6 @@ Date: 24 Jan 2017
         </div>
     </div>
 </section>
-<script src="../ngDashboard/js/corpus.js"></script>
-<script>
-	//var corpus=new Worker("../ngDashboard/js/corpus.js");
-$(function() {
-	var $bar = $("#indexing-bar");
-	if (!!window.Worker) {
-		var bmWorker = new Worker("../ngDashboard/js/bm25.js");
-
-		bmWorker.onmessage = function(e) {
-			var payload = e.data;
-			switch (payload.type) {
-				case 'index-update':
-					var pct = Math.round(payload.data * 100);
-					$bar.css("width", pct + "%");
-
-					if (pct === 100) {
-						$("#indexing").hide();
-						$("#search").show();
-					}
-					break;
-
-				case 'search-results':
-					console.log(payload.data);
-					var $ul = $("#search-results");
-					$ul.html('');
-					for (var i in payload.data) {
-						var row = payload.data[i];
-						var $li = $("<li>").html(row.body + " <small>Score: " + row._score + "</small>");
-						$ul.append($li);
-					}
-					break;
-			}
-		}
-
-		bmWorker.postMessage({type:"index-batch", data: corpus});
-
-	}
-
-	$("#search-form").on('submit', function() {
-		var q = $("#search-query").val();
-		bmWorker.postMessage({type:"search", data: q});
-		return false;
-	});
-});
-
-</script>
 
 <style>
 	body {
