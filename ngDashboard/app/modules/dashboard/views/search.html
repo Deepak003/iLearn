@@ -1,0 +1,145 @@
+﻿<!--
+Author: Deepak Tiwari
+Page Description: Search page
+Date: 24 Jan 2017
+-->
+
+<section class="content-header">
+    <h1>
+        Search - This is based on TF-IDF ML Algo which indexes and ranks the results basis relevance.
+    </h1>
+    
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="row" style="min-height:500px;">
+        <div class="col-md-12">
+			<div id="indexing">
+				<p>Please wait, indexing...</p>
+				<div id="indexing-bar-container">
+					<div id="indexing-bar"></div>
+				</div>
+			</div>
+			<div id="search" style="display: none;">
+				<form id="search-form">
+					<input id="search-query" placeholder="Search for a concept, like 'machine learning'...">
+					<button type="submit">Search</button>
+				</form>
+
+				<ul id="search-results">
+				</ul>
+			</div>	
+        </div>
+    </div>
+</section>
+<script src="../ngDashboard/js/corpus.js"></script>
+<script>
+	//var corpus=new Worker("../ngDashboard/js/corpus.js");
+$(function() {
+	var $bar = $("#indexing-bar");
+	if (!!window.Worker) {
+		var bmWorker = new Worker("../ngDashboard/js/bm25.js");
+
+		bmWorker.onmessage = function(e) {
+			var payload = e.data;
+			switch (payload.type) {
+				case 'index-update':
+					var pct = Math.round(payload.data * 100);
+					$bar.css("width", pct + "%");
+
+					if (pct === 100) {
+						$("#indexing").hide();
+						$("#search").show();
+					}
+					break;
+
+				case 'search-results':
+					console.log(payload.data);
+					var $ul = $("#search-results");
+					$ul.html('');
+					for (var i in payload.data) {
+						var row = payload.data[i];
+						var $li = $("<li>").html(row.body + " <small>Score: " + row._score + "</small>");
+						$ul.append($li);
+					}
+					break;
+			}
+		}
+
+		bmWorker.postMessage({type:"index-batch", data: corpus});
+
+	}
+
+	$("#search-form").on('submit', function() {
+		var q = $("#search-query").val();
+		bmWorker.postMessage({type:"search", data: q});
+		return false;
+	});
+});
+
+</script>
+
+<style>
+	body {
+		font-family: arial, sans-serif;
+		font-size: 15px;
+		line-height: 1.4em;
+	}
+
+	#indexing, #search {
+		width: 900px;
+		
+	}
+
+	#indexing-bar-container {
+		border: 1px solid #666;
+		height: 20px;
+	}
+
+	#indexing-bar {
+		background-color: #CCC;
+		width: 0%;
+		height: 100%;
+	}
+
+	#search-query {
+		width: 80%;
+		border: 1px solid #ccc;
+		
+		padding: 2px 4px;
+	}
+
+	ul#search-results {
+		list-style: none;
+		margin: 20px 0;
+		padding: 0;
+	}
+
+	ul#search-results li {
+		margin-bottom: 10px;
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 10px;
+	}
+	ul#search-results li small {
+		color: #999;
+		display: block;
+	}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

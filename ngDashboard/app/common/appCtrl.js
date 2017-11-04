@@ -126,7 +126,7 @@ function ($rootScope, $scope, $state, $location, Flash,appSettings) {
             title: "Courses",
             icon: "globe",
             state: "websites"
-        }/* ,
+        } ,
         {
             title: "iMentor (ML)",
             icon: "laptop",
@@ -136,7 +136,7 @@ function ($rootScope, $scope, $state, $location, Flash,appSettings) {
             title: "Relevance Search(ML)",
             icon: "clipboard",
             state: "search"
-        } */
+        } 
     ];
 
     //set the theme selected
