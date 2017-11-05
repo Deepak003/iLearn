@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link data-require="bootstrap@3.2.0" data-semver="3.2.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css" />
+    <link data-require="font-awesome@4.2.0" data-semver="4.2.0" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="theme.css" />
+    
+    <script data-require="jquery@2.1.1" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script data-require="bootstrap@3.2.0" data-semver="3.2.0" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.js"></script>
+    
+    <script src="canvas-toBlob.js"></script>
+    <script src="html2canvas.min.js"></script>
+    <script src="jspdf.mychanges.js"></script>
+    <script src="jspdf.debug.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body id="body">
+    <!-- navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">Billy's jsPDF test</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">jsPDf<span class="caret"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">Test</a>
+            </li>
+            <li>
+              <a href="#">Only</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">This is a jsPDF test</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- splash -->
+    <section class="section-one">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div>
+              <img class="logo" src="//i.imgur.com/ngwebqj.png" />
+            </div>
+            <h1>Trying to fix blurry jsPDF images</h1>
+            <div class="download-btns">
+              <button class="btn btn-info" id="newHotness" type="button">New Hotness</button>
+              <button class="btn btn-success" id="newHotness2" type="button">New Hotness 2</button>
+              <button class="btn btn-warning" id="oldBusted" type="button">Old Busted</button>
+              <button class="btn btn-link" id="alsoBusted" type="button">Also Busted</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- background and text -->
+    <section class="section-two">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6">
+            <h3><i class="fa fa-binoculars"></i> It Was Blurry</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut commodo ante. Sed nec volutpat odio, placerat.</p>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <h3><i class="fa fa-flash"></i> So Blurry</h3>
+            <p>Aenean sapien sapien, mattis interdum magna in, viverra faucibus ligula. Vestibulum vehicula enim quis.</p>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <h3><i class="fa fa-github"></i> But Don't worry</h3>
+            <p>Aliquam in eros sit amet quam sollicitudin blandit. Cras mattis sapien ut convallis aliquam. Curabitur augue augue, suscipit sit amet.</p>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <h3><i class="fa fa-plane"></i> I'll Attempt</h3>
+            <p>Praesent ut ultricies elit. Maecenas vel metus nec elit sagittis malesuada. Donec vel convallis mauris. Pellentesque.</p>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <h3><i class="fa fa-recycle"></i> To Fix It</h3>
+            <p>Suspendisse iaculis dapibus erat, ac fringilla diam vehicula nec. Sed.</p>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <h3><i class="fa fa-smile-o"></i> With Magic Blobs</h3>
+            <p>Sed auctor arcu ac aliquam placerat. <a href="#">Sed auctor est ornare</a> dui sagittis, nec euismod est porttitor. Maecenas eget ullamcorper augue.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- smaller text -->
+    <section class="section-three">
+      <div class="container">
+        <div class="section-header">
+          <h1>MORE TEXT</h1>
+          <h4>This is here just because I need to fill up more of the page</h4>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-sm-3 circle-thing-wrap red">
+            <div class="circle-thing">
+              <i class="fa fa-area-chart fa-4x"></i>
+            </div>
+            <h5 class="border-bottom">Cool Test</h5>
+            <p>Praesent ut nisl nec nunc hendrerit porta. Curabitur ut erat auctor, ornare mi dapibus, scelerisque dui. Duis id ultrices arcu. Mauris ornare in urna eu auctor.</p>
+          </div>
+          <div class="col-lg-3 col-sm-3 circle-thing-wrap green">
+            <div class="circle-thing">
+              <i class="fa fa-file-pdf-o fa-4x"></i>
+            </div>
+            <h5 class="border-bottom">Looks Nice</h5>
+            <p>Aliquam scelerisque risus at nisi laoreet tempor. In semper eu justo eget vestibulum. Nulla facilisi. Curabitur massa orci, tincidunt et risus sagittis, convallis maximus erat. Praesent non luctus eros. Integer rutrum ex quis venenatis lacinia.</p>
+          </div>
+          <div class="col-lg-3 col-sm-3 circle-thing-wrap blue">
+            <div class="circle-thing">
+              <i class="fa fa-umbrella fa-4x"></i>
+            </div>
+            <h5 class="border-bottom">Just Because</h5>
+            <p>metus nulla, hendrerit eu iaculis ac, facilisis vitae eros. Morbi et ultrices mauris. Nunc nisl nunc, varius vitae dui nec, malesuada egestas massa.</p>
+          </div>
+          <div class="col-lg-3 col-sm-3 circle-thing-wrap yellow">
+            <div class="circle-thing">
+              <i class="fa fa-trophy fa-4x"></i>
+            </div>
+            <h5 class="border-bottom">Ahh yeaa</h5>
+            <p>Aenean enim leo, faucibus at varius pretium, ultricies a dui. Duis egestas ipsum ipsum. In sollicitudin imperdiet imperdiet. Aliquam erat volutpat. Integer sed bibendum felis. Integer eu odio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- pictures and text -->
+    <section class="section-four">
+      <div class="container">
+        <div class="section-header">
+          <h1>Obligitory picture section</h1>
+          <h4>Let's see if these pictures loose any quality</h4>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-sm-3">
+            <div class="stat red">
+              <div class="stat-icon">
+                <i class="fa fa-thumbs-o-down fa-3x"></i>
+              </div>
+              <div class="stat-text">
+                <h3 class="border-bottom">1,234</h3>
+                <p>A nice number</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-3">
+            <div class="stat green">
+              <div class="stat-icon">
+                <i class="fa fa-thumbs-o-up fa-3x"></i>
+              </div>
+              <div class="stat-text">
+                <h3 class="border-bottom">987</h3>
+                <p>Different number</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-3">
+            <div class="stat blue">
+              <div class="stat-icon">
+                <i class="fa fa-desktop fa-3x"></i>
+              </div>
+              <div class="stat-text">
+                <h3 class="border-bottom">56,789</h3>
+                <p>Number three</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-3">
+            <div class="stat yellow">
+              <div class="stat-icon">
+                <i class="fa fa-envelope-o fa-3x"></i>
+              </div>
+              <div class="stat-text">
+                <h3 class="border-bottom">987</h3>
+                <p>And the fourth number</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-five">
+      <div class="container">
+        <div class="section-header">
+          <h1>Table section</h1>
+          <h4>This tests a lot of smaller text I guess</h4>
+        </div>
+        <div class="table-wrap">
+          <table class="table table-striped table-bordered" cellpadding="1" cellspacing="1">
+            <thead>
+              <tr>
+              	<th>Animal</th>
+              	<th># of legs</th>
+              	<th>Date Discovered</th>
+              	<th>Coolness</th>
+              	<th>Favorite Food</th>
+              	<th>Price</th>
+              	<th>Color</th>
+              	<th>Country</th>
+              	<th>City</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              	<td>Jack</td>
+              	<td>10</td>
+              	<td>09/21/2015</td>
+              	<td>3</td>
+              	<td>eget, ipsum. Donec</td>
+              	<td>$8,366</td>
+              	<td>cursus</td>
+              	<td>Martinique</td>
+              	<td>Tsiigehtchic</td>
+              </tr>
+              <tr>
+              	<td>Leonard</td>
+              	<td>5</td>
+              	<td>02/24/2014</td>
+              	<td>7</td>
+              	<td>vitae</td>
+              	<td>$82,684</td>
+              	<td>tempus</td>
+              	<td>Maldives</td>
+              	<td>Lesve</td>
+              </tr>
+              <tr>
+              	<td>Timothy</td>
+              	<td>7</td>
+              	<td>08/21/2014</td>
+              	<td>2</td>
+              	<td>metus facilisis lorem</td>
+              	<td>$13,802</td>
+              	<td>vel</td>
+              	<td>Somalia</td>
+              	<td>Archennes</td>
+              </tr>
+              <tr>
+              	<td>Lilah</td>
+              	<td>3</td>
+              	<td>01/21/2014</td>
+              	<td>1</td>
+              	<td>vel lectus.</td>
+              	<td>$77,226</td>
+              	<td>semper</td>
+              	<td>Belize</td>
+              	<td>Sant'Eufemia a Maiella</td>
+              </tr>
+              <tr>
+              	<td>Mara</td>
+              	<td>8</td>
+              	<td>07/16/2015</td>
+              	<td>1</td>
+              	<td>ipsum primis</td>
+              	<td>$83,867</td>
+              	<td>vitae</td>
+              	<td>Laos</td>
+              	<td>Khanpur</td>
+              </tr>
+              <tr>
+              	<td>Karly</td>
+              	<td>2</td>
+              	<td>06/10/2015</td>
+              	<td>8</td>
+              	<td>Vestibulum ante ipsum</td>
+              	<td>$43,833</td>
+              	<td>imperdiet,</td>
+              	<td>Christmas Island</td>
+              	<td>Bacabal</td>
+              </tr>
+              <tr>
+              	<td>Celeste</td>
+              	<td>6</td>
+              	<td>02/06/2014</td>
+              	<td>5</td>
+              	<td>eu</td>
+              	<td>$84,319</td>
+              	<td>enim.</td>
+              	<td>Ecuador</td>
+              	<td>Geel</td>
+              </tr>
+              <tr>
+              	<td>Addison</td>
+              	<td>10</td>
+              	<td>11/04/2013</td>
+              	<td>5</td>
+              	<td>ut,</td>
+              	<td>$15,926</td>
+              	<td>lacinia</td>
+              	<td>Iran</td>
+              	<td>Rohtak</td>
+              </tr>
+              <tr>
+              	<td>Mara</td>
+              	<td>5</td>
+              	<td>03/05/2015</td>
+              	<td>3</td>
+              	<td>sagittis. Duis</td>
+              	<td>$16,513</td>
+              	<td>Fusce</td>
+              	<td>Israel</td>
+              	<td>Patalillo</td>
+              </tr>
+              <tr>
+              	<td>Hyacinth</td>
+              	<td>8</td>
+              	<td>12/09/2014</td>
+              	<td>8</td>
+              	<td>pellentesque. Sed</td>
+              	<td>$62,407</td>
+              	<td>placerat,</td>
+              	<td>New Caledonia</td>
+              	<td>Mussy-la-Ville</td>
+              </tr>
+              <tr>
+              	<td>Kerry</td>
+              	<td>1</td>
+              	<td>11/09/2013</td>
+              	<td>10</td>
+              	<td>magna nec</td>
+              	<td>$39,047</td>
+              	<td>luctus</td>
+              	<td>San Marino</td>
+              	<td>Sorradile</td>
+              </tr>
+              <tr>
+              	<td>Rhoda</td>
+              	<td>3</td>
+              	<td>05/05/2015</td>
+              	<td>3</td>
+              	<td>Curabitur vel lectus.</td>
+              	<td>$58,685</td>
+              	<td>purus.</td>
+              	<td>Portugal</td>
+              	<td>Sant'Elena</td>
+              </tr>
+              <tr>
+              	<td>Judith</td>
+              	<td>10</td>
+              	<td>07/25/2015</td>
+              	<td>1</td>
+              	<td>ac tellus. Suspendisse</td>
+              	<td>$73,255</td>
+              	<td>orci,</td>
+              	<td>Romania</td>
+              	<td>Paradise</td>
+              </tr>
+              <tr>
+              	<td>Armando</td>
+              	<td>2</td>
+              	<td>06/14/2015</td>
+              	<td>4</td>
+              	<td>ad litora torquent</td>
+              	<td>$80,213</td>
+              	<td>et</td>
+              	<td>Israel</td>
+              	<td>Erchie</td>
+              </tr>
+              <tr>
+              	<td>Chantale</td>
+              	<td>9</td>
+              	<td>05/26/2015</td>
+              	<td>6</td>
+              	<td>et</td>
+              	<td>$42,146</td>
+              	<td>Cum</td>
+              	<td>Panama</td>
+              	<td>Qutubullapur</td>
+              </tr>
+              <tr>
+              	<td>Megan</td>
+              	<td>6</td>
+              	<td>06/13/2015</td>
+              	<td>6</td>
+              	<td>in molestie tortor</td>
+              	<td>$15,717</td>
+              	<td>amet</td>
+              	<td>Poland</td>
+              	<td>Houffalize</td>
+              </tr>
+              <tr>
+              	<td>Daria</td>
+              	<td>3</td>
+              	<td>02/25/2015</td>
+              	<td>9</td>
+              	<td>accumsan neque et</td>
+              	<td>$34,502</td>
+              	<td>Nam</td>
+              	<td>Cook Islands</td>
+              	<td>Temse</td>
+              </tr>
+              <tr>
+              	<td>Jessica</td>
+              	<td>1</td>
+              	<td>05/08/2014</td>
+              	<td>3</td>
+              	<td>Suspendisse</td>
+              	<td>$51,462</td>
+              	<td>ornare,</td>
+              	<td>Cameroon</td>
+              	<td>Schwedt</td>
+              </tr>
+              <tr>
+              	<td>Caryn</td>
+              	<td>4</td>
+              	<td>03/10/2015</td>
+              	<td>9</td>
+              	<td>nibh. Quisque nonummy</td>
+              	<td>$37,317</td>
+              	<td>pellentesque.</td>
+              	<td>Portugal</td>
+              	<td>Patna</td>
+              </tr>
+              <tr>
+              	<td>Latifah</td>
+              	<td>4</td>
+              	<td>03/22/2014</td>
+              	<td>2</td>
+              	<td>non leo.</td>
+              	<td>$71,665</td>
+              	<td>erat.</td>
+              	<td>Bahrain</td>
+              	<td>Aurora</td>
+              </tr>
+              <tr>
+              	<td>Judah</td>
+              	<td>8</td>
+              	<td>01/04/2015</td>
+              	<td>3</td>
+              	<td>sodales nisi magna</td>
+              	<td>$92,864</td>
+              	<td>sit</td>
+              	<td>Croatia</td>
+              	<td>Roksem</td>
+              </tr>
+              <tr>
+              	<td>Colorado</td>
+              	<td>4</td>
+              	<td>06/30/2014</td>
+              	<td>5</td>
+              	<td>dignissim tempor arcu.</td>
+              	<td>$49,144</td>
+              	<td>elit</td>
+              	<td>Cape Verde</td>
+              	<td>Chiavari</td>
+              </tr>
+              <tr>
+              	<td>Darryl</td>
+              	<td>6</td>
+              	<td>01/14/2014</td>
+              	<td>8</td>
+              	<td>neque.</td>
+              	<td>$39,896</td>
+              	<td>nisi.</td>
+              	<td>Sao Tome and Principe</td>
+              	<td>Nizamabad</td>
+              </tr>
+              <tr>
+              	<td>Melodie</td>
+              	<td>3</td>
+              	<td>01/03/2015</td>
+              	<td>4</td>
+              	<td>Nulla eu neque</td>
+              	<td>$94,356</td>
+              	<td>nec</td>
+              	<td>Iran</td>
+              	<td>Maranello</td>
+              </tr>
+              <tr>
+              	<td>Sean</td>
+              	<td>2</td>
+              	<td>09/19/2014</td>
+              	<td>1</td>
+              	<td>a mi</td>
+              	<td>$64,069</td>
+              	<td>Vivamus</td>
+              	<td>Ireland</td>
+              	<td>Reading</td>
+              </tr>
+              <tr>
+              	<td>Simone</td>
+              	<td>5</td>
+              	<td>05/10/2014</td>
+              	<td>5</td>
+              	<td>eget, ipsum. Donec</td>
+              	<td>$24,182</td>
+              	<td>euismod</td>
+              	<td>Antarctica</td>
+              	<td>100 Mile House</td>
+              </tr>
+              <tr>
+              	<td>Rafael</td>
+              	<td>3</td>
+              	<td>12/04/2014</td>
+              	<td>2</td>
+              	<td>ornare lectus</td>
+              	<td>$43,009</td>
+              	<td>justo.</td>
+              	<td>Palau</td>
+              	<td>Bazel</td>
+              </tr>
+              <tr>
+              	<td>Stephanie</td>
+              	<td>10</td>
+              	<td>08/24/2014</td>
+              	<td>10</td>
+              	<td>Nunc pulvinar arcu</td>
+              	<td>$43,867</td>
+              	<td>leo.</td>
+              	<td>Uzbekistan</td>
+              	<td>Montpellier</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <span>Not a copyright at all.</span>
+      </div>
+    </footer>
+  </body>
+
+</html>

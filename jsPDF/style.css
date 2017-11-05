@@ -1,0 +1,167 @@
+body {
+  padding-top: 50px;
+}
+.section-one {
+  padding: 5em 0 2em;
+  background-color: #141d27;
+  color: #fff;
+  text-align: center;
+}
+.section-one .logo {
+  width: 160px;
+}
+.section-one .download-btns {
+  margin: 2em 0;
+}
+.section-one .download-btns .btn:first-child {
+  margin-right: 7px;
+}
+
+.section-two {
+  padding: 4em 0 3em;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  background-color: #eaf1f1;
+}
+.section-two .fa {
+  margin-right: .5em;
+}
+.section-two p {
+  margin-bottom: 3em;
+}
+
+.section-three {
+  padding: 4em 0 3em;
+}
+
+.section-header {
+  text-align: center;
+  padding-bottom: 2em;
+  text-transform: uppercase;
+}
+.circle-thing-wrap {
+  margin-bottom: 2em;
+  text-align:center;
+}
+.circle-thing-wrap p {
+  font-size:14px;
+}
+.circle-thing {
+  margin-bottom: 30px;
+  width: 145px;
+  height: 145px;
+  margin: auto;
+  border-radius: 50%;
+  border: 10px solid #ececec;
+  margin-bottom: 20px;
+  position: relative;
+}
+.circle-thing .fa {
+  height: 125px;
+  width: 125px;
+  line-height: 125px;
+  text-align: center;
+}
+.border-bottom {
+  margin-bottom: 15px;
+  color: #404040;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+}
+.border-bottom:before {
+  position: absolute;
+  margin: 0;
+  z-index: 1;
+  content: "";
+  width: 75%;
+  height: 2px;
+  background: #404040;
+  bottom: -9px;
+  left: 12.5%;
+}
+
+
+
+.section-four {
+  background-image: url("//i.imgur.com/ZqrnA5z.jpg");
+  background-position: 0 -175px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width:100%;
+  color: white;
+  padding: 3em 0 5em;
+}
+
+.section-five {
+  padding: 3em 0 5em;
+}
+
+
+.stat {
+  text-align: center;
+}
+.stat h3 {
+  color: #fff;
+  margin-bottom: 17px;
+  font-size:24px;
+}
+.stat p {
+  color: #d1d1d1;
+  font-size: 16px;
+}
+
+/* colors */
+.red.stat {
+ color: #e96656;
+}
+.green.stat {
+ color:#34d293; 
+}
+.blue.stat {
+ color: #3ab0e2;
+}
+.yellow.stat {
+ color: #f7d861;
+}
+.red .circle-thing {
+  border-color: #e96656;
+}
+.red .border-bottom:before {
+  background: #e96656;
+}
+.green .circle-thing {
+  border-color: #34d293;
+}
+.green .border-bottom:before {
+  background: #34d293;
+}
+.blue .circle-thing {
+  border-color: #3ab0e2;
+}
+.blue .border-bottom:before {
+  background: #3ab0e2;
+}
+.yellow .circle-thing {
+  border-color: #f7d861;
+}
+.yellow .border-bottom:before {
+  background: #f7d861;
+}
+
+
+.table-wrap {
+  border-top: 1px solid #3ab0e2;
+}
+.table.table-bordered td {
+  font-size: 12px;
+}
+
+footer {
+  background-color: #141d27;
+  color: #eaf1f1;
+  padding: 2em 0;
+}
