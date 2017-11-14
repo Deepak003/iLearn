@@ -6,81 +6,146 @@ Date: 05 Jan 2017
 
 <section class="content-header">
     <h1>
-        ChartJS
-        <small>Preview sample</small>
+        iRecall2Predict<br><br>
+        <small><font color="black"><i>Collaborative filtering approaches build a model from a user's past behaviour (items previously purchased or selected and/or numerical ratings given to those items) as well as similar decisions made by other users. This model is then used to predict items (or ratings for items) that the user may have an interest in.</i></font></small>
     </h1>
-    <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Charts</a></li>
-        <li class="active">ChartJS</li>
-    </ol>
+    
 </section>
 <!-- Main content -->
 <section class="content">
-    <div class="row">
-        <div class="col-md-6">
-            <!-- AREA CHART -->
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Area Chart</h3>
-                    <div class="box-tools pull-right">
-                        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                        <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+     <div class="row">
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+
+                      <div class="panel-heading"><b>Before Recommender</b></div>
+                      <div class="panel-body">
+                        <table class="table table-hover table-stripped">
+                            <thead>
+                                <tr>
+                                    <th>User / Course</th>
+                                    <th>Deepak</th>
+                                    <th>Purushottam</th>
+                                    <th>Rishi</th>
+                                    <th>Student</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>AngularJS</td>
+                                    <td>{{table.getCell('AngularJS', 'Deepak')| number:0}}</td>
+                                    <td>{{table.getCell('AngularJS', 'Purushottam')| number:0}}</td>
+                                    <td>{{table.getCell('AngularJS', 'Rishi')| number:0}}</td>
+                                    <td>{{table.getCell('AngularJS', 'Student')| number:0}}</td>
+                                </tr>
+                                <tr>
+                                    <td>DataStructures</td>
+                                    <td>{{table.getCell('DataStructures', 'Deepak')| number:0}}</td>
+                                    <td>{{table.getCell('DataStructures', 'Purushottam')| number:0}}</td>
+                                    <td>{{table.getCell('DataStructures', 'Rishi')| number:0}}</td>
+                                    <td>{{table.getCell('DataStructures', 'Student')| number:0}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Java</td>
+                                    <td>{{table.getCell('Java', 'Deepak')| number:0}}</td>
+                                    <td>{{table.getCell('Java', 'Purushottam')| number:0}}</td>
+                                    <td>{{table.getCell('Java', 'Rishi')| number:0}}</td>
+                                    <td>{{table.getCell('Java', 'Student')| number:0}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Oracle</td>
+                                    <td>{{table.getCell('Oracle', 'Deepak')| number:0}}</td>
+                                    <td>{{table.getCell('Oracle', 'Purushottam')| number:0}}</td>
+                                    <td>{{table.getCell('Oracle', 'Rishi')| number:0}}</td>
+                                    <td>{{table.getCell('Oracle', 'Student')| number:0}}</td>
+                                </tr>
+                                <tr>
+                                    <td>React</td>
+                                    <td>{{table.getCell('React', 'Deepak')| number:0}}</td>
+                                    <td>{{table.getCell('React', 'Purushottam')| number:0}}</td>
+                                    <td>{{table.getCell('React', 'Rishi')| number:0}}</td>
+                                    <td>{{table.getCell('React', 'Student')| number:0}}</td>
+                                </tr>
+								<tr>
+                                    <td>Handlebars</td>
+                                    <td>{{table.getCell('Handlebars', 'Deepak')| number:0}}</td>
+                                    <td>{{table.getCell('Handlebars', 'Purushottam')| number:0}}</td>
+                                    <td>{{table.getCell('Handlebars', 'Rishi')| number:0}}</td>
+                                    <td>{{table.getCell('Handlebars', 'Student')| number:0}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div class="box-body">
-                    <div class="chart">
-                        <canvas id="areaChart" style="height:250px"></canvas>
-                    </div>
-                </div><!-- /.box-body -->
-            </div><!-- /.box -->
-            <!-- DONUT CHART -->
-            <div class="box box-danger">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Donut Chart</h3>
-                    <div class="box-tools pull-right">
-                        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                        <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                <div class="col-sm-6"></div>
+                
+                </div>
+                
+                <div class="col-sm-6">
+                    <div class="panel panel-default">
+
+                      <div class="panel-heading"><b>After Recommender</b></div>
+                      <div class="panel-body">
+                        <table class="table table-hover table-stripped">
+                            <thead>
+                                <tr>
+                                    <th>User / Course</th>
+                                    <th>Deepak</th>
+                                    <th>Purushottam</th>
+                                    <th>Rishi</th>
+                                    <th>Student</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>AngularJS</td>
+                                    <td>{{predicted_table.getCell('AngularJS', 'Deepak')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('AngularJS', 'Purushottam')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('AngularJS', 'Rishi')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('AngularJS', 'Student')| number:0}}</td>
+                                </tr>
+                                <tr>
+                                    <td>DataStructures</td>
+                                    <td>{{predicted_table.getCell('DataStructures', 'Deepak')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('DataStructures', 'Purushottam')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('DataStructures', 'Rishi')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('DataStructures', 'Student')| number:0}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Java</td>
+                                    <td>{{predicted_table.getCell('Java', 'Deepak')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('Java', 'Purushottam')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('Java', 'Rishi')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('Java', 'Student')| number:0}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Oracle</td>
+                                    <td>{{predicted_table.getCell('Oracle', 'Deepak')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('Oracle', 'Purushottam')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('Oracle', 'Rishi')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('Oracle', 'Student')| number:0}}</td>
+                                </tr>
+                                <tr>
+                                    <td>React</td>
+                                    <td>{{predicted_table.getCell('React', 'Deepak')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('React', 'Purushottam')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('React', 'Rishi')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('React', 'Student')| number:0}}</td>
+                                </tr>
+								<tr>
+                                    <td>Handlebars</td>
+                                    <td>{{predicted_table.getCell('React', 'Deepak')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('React', 'Purushottam')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('React', 'Rishi')| number:0}}</td>
+                                    <td>{{predicted_table.getCell('React', 'Student')| number:0}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div class="box-body">
-                    <canvas id="pieChart" style="height:250px"></canvas>
-                </div><!-- /.box-body -->
-            </div><!-- /.box -->
-        </div><!-- /.col (LEFT) -->
-        <div class="col-md-6">
-            <!-- LINE CHART -->
-            <div class="box box-info">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Line Chart</h3>
-                    <div class="box-tools pull-right">
-                        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                        <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                    </div>
+                <div class="col-sm-6"></div>
+                
                 </div>
-                <div class="box-body">
-                    <div class="chart">
-                        <canvas id="lineChart" style="height:250px"></canvas>
-                    </div>
-                </div><!-- /.box-body -->
-            </div><!-- /.box -->
-            <!-- BAR CHART -->
-            <div class="box box-success">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Bar Chart</h3>
-                    <div class="box-tools pull-right">
-                        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                        <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                    </div>
-                </div>
-                <div class="box-body">
-                    <div class="chart">
-                        <canvas id="barChart" style="height:230px"></canvas>
-                    </div>
-                </div><!-- /.box-body -->
-            </div><!-- /.box -->
-        </div><!-- /.col (RIGHT) -->
-    </div><!-- /.row -->
+            </div>
 </section><!-- /.content -->
 
 

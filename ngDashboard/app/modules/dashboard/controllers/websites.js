@@ -13,22 +13,130 @@ function ($http,$rootScope, $scope, $state,$window, $location, dashboardService,
     var vm = this;
 	$http.get('../ngCourse/uploads/list-of-courses.json').success(function (data){
 	  console.log(JSON.stringify(data));
-	  vm.courses =JSON.parse(JSON.stringify(data));
+	  //vm.courses =JSON.parse(JSON.stringify(data));
 		//obj1.push(_objCourse);
 	});
-
-    vm.websites = [
-        {
-            title: "AngularJS Course",
-            image: "1_AngularJS",
-            link:"../ngCourse/uploads/1_AngularJS/index.html"
-        },
-        {
-            title: "Javascript Course",
-            image: "6_Javascript",
-            link: "../ngCourse/uploads/6_Javascript/index.html"
-        }
-    ];
+    console.log("userName:"+$rootScope.userName);
+	if($rootScope.userName=="Deepak"){
+		vm.courses = [
+			{
+				name: "AngularJS",
+				thumbnail: "../ngCourse/uploads/1_AngularJS/thumbnails/1.jpg",
+				url:"../ngCourse/uploads/1_AngularJS"
+			},
+			{
+				name: "DataStructures",
+				thumbnail: "../ngCourse/uploads/2_DataStructures/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/2_DataStructures"
+			},
+			{
+				name: "React",
+				thumbnail: "../ngCourse/uploads/8_React_Native_Crash_Course/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/8_React_Native_Crash_Course"
+			},
+			{
+				name: "Handlebars",
+				thumbnail: "../ngCourse/uploads/3_Handlebars/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/3_Handlebars"
+			}
+        ];
+	}else if($rootScope.userName=="Purushottam"){
+		vm.courses = [
+			{
+				name: "AngularJS",
+				thumbnail: "../ngCourse/uploads/1_AngularJS/thumbnails/1.jpg",
+				url:"../ngCourse/uploads/1_AngularJS"
+			},
+			{
+				name: "Java",
+				thumbnail: "../ngCourse/uploads/4_Java_Advanced/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/4_Java_Advanced"
+			},
+			{
+				name: "React",
+				thumbnail: "../ngCourse/uploads/8_React_Native_Crash_Course/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/8_React_Native_Crash_Course"
+			},
+			{
+				name: "Handlebars",
+				thumbnail: "../ngCourse/uploads/3_Handlebars/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/3_Handlebars"
+			}
+        ];
+		
+	}else if($rootScope.userName=="Rishi"){
+		vm.courses = [
+			{
+				name: "Java",
+				thumbnail: "../ngCourse/uploads/4_Java_Advanced/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/4_Java_Advanced"
+			},
+			{
+				name: "React",
+				thumbnail: "../ngCourse/uploads/8_React_Native_Crash_Course/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/8_React_Native_Crash_Course"
+			},
+			{
+				name: "Handlebars",
+				thumbnail: "../ngCourse/uploads/3_Handlebars/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/3_Handlebars"
+			}
+        ];
+		
+	}else if($rootScope.userName=="Student"){
+		vm.courses = [
+			{
+				name: "Java",
+				thumbnail: "../ngCourse/uploads/4_Java_Advanced/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/4_Java_Advanced"
+			},
+			{
+				name: "React",
+				thumbnail: "../ngCourse/uploads/8_React_Native_Crash_Course/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/8_React_Native_Crash_Course"
+			},
+			{
+				name: "Handlebars",
+				thumbnail: "../ngCourse/uploads/3_Handlebars/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/3_Handlebars"
+			}
+        ];
+		
+	}else{
+		vm.courses = [
+			{
+				name: "AngularJS",
+				thumbnail: "../ngCourse/uploads/1_AngularJS/thumbnails/1.jpg",
+				url:"../ngCourse/uploads/1_AngularJS"
+			},
+			{
+				name: "DataStructures",
+				thumbnail: "../ngCourse/uploads/2_DataStructures/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/2_DataStructures"
+			},
+			{
+				name: "Java",
+				thumbnail: "../ngCourse/uploads/4_Java_Advanced/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/4_Java_Advanced"
+			},
+			{
+				name: "Oracle",
+				thumbnail: "../ngCourse/uploads/7_Oracle/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/7_Oracle"
+			},
+			{
+				name: "React",
+				thumbnail: "../ngCourse/uploads/8_React_Native_Crash_Course/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/8_React_Native_Crash_Course"
+			},
+			{
+				name: "Handlebars",
+				thumbnail: "../ngCourse/uploads/3_Handlebars/thumbnails/1.jpg",
+				url: "../ngCourse/uploads/3_Handlebars"
+			}
+        ];
+	}
+    
     console.log("coming to Websites controller");
 	vm.openCourse = function(courseLnk){
 		//alert(courseLnk);

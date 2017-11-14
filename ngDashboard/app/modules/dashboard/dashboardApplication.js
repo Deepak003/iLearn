@@ -91,6 +91,16 @@ dashboard.config(["$stateProvider", function ($stateProvider) {
         }
     }); 
 	
+	$stateProvider.state('app.predict', {
+        url: '/predict',
+        templateUrl: 'ngDashboard/app/modules/dashboard/views/gallery.html',
+        controller: 'GalleryController',
+        controllerAs: 'vm',
+        data: {
+            pageTitle: 'iRecall2Predict'
+        }
+    }); 
+	
 
     //About Me page state
     $stateProvider.state('app.about', {
