@@ -15,8 +15,36 @@ function ($rootScope, $window,$scope, $state, $location, dashboardService, Flash
 
     vm.showDetails = true;
     vm.home = {};
-    
-    vm.home.mainData = [
+	 vm.home.mainData =[];
+   if($rootScope.userName=="Deepak"){
+     vm.home.mainData = [
+        {
+            title: "Projects",
+            value: "36+",
+            theme: "aqua",
+            icon: "puzzle-piece"
+        },
+        {
+            title: "Designs",
+            value: "14+",
+            theme: "red",
+            icon: "paint-brush"
+        },
+        {
+            title: "Awards",
+            value: "30+",
+            theme: "green",
+            icon: "trophy"
+        },
+        {
+            title: "Cups of Beer",
+            value: "40",
+            theme: "yellow",
+            icon: "glass"
+        },
+    ];
+   }else if($rootScope.userName=="Rishi"){
+	   vm.home.mainData = [
         {
             title: "Projects",
             value: "30+",
@@ -42,6 +70,91 @@ function ($rootScope, $window,$scope, $state, $location, dashboardService, Flash
             icon: "glass"
         },
     ];
+	   
+   }else if($rootScope.userName=="Purushottam"){
+	   vm.home.mainData = [
+        {
+            title: "Projects",
+            value: "20+",
+            theme: "aqua",
+            icon: "puzzle-piece"
+        },
+        {
+            title: "Designs",
+            value: "150+",
+            theme: "red",
+            icon: "paint-brush"
+        },
+        {
+            title: "Awards",
+            value: "10+",
+            theme: "green",
+            icon: "trophy"
+        },
+        {
+            title: "Cups of Beer",
+            value: "10",
+            theme: "yellow",
+            icon: "glass"
+        },
+    ];
+   }else if($rootScope.userName=="Student"){
+	   vm.home.mainData = [
+        {
+            title: "Projects",
+            value: "5+",
+            theme: "aqua",
+            icon: "puzzle-piece"
+        },
+        {
+            title: "Designs",
+            value: "50+",
+            theme: "red",
+            icon: "paint-brush"
+        },
+        {
+            title: "Awards",
+            value: "5+",
+            theme: "green",
+            icon: "trophy"
+        },
+        {
+            title: "Cups of Beer",
+            value: "2",
+            theme: "yellow",
+            icon: "glass"
+        },
+    ];
+	   
+   }else{
+	   vm.home.mainData = [
+        {
+            title: "Projects",
+            value: "32+",
+            theme: "aqua",
+            icon: "puzzle-piece"
+        },
+        {
+            title: "Designs",
+            value: "20+",
+            theme: "red",
+            icon: "paint-brush"
+        },
+        {
+            title: "Awards",
+            value: "56+",
+            theme: "green",
+            icon: "trophy"
+        },
+        {
+            title: "Cups of Beer",
+            value: "9",
+            theme: "yellow",
+            icon: "glass"
+        },
+    ];
+   }
+    
 
     //skills progress bar
     vm.home.skills = [
