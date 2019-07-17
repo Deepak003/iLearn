@@ -58,7 +58,7 @@
  * </pre>
  *
  *
- * @author Deepak Tiwari [ Emp Id: U43779 ]
+ * @author Manu Tiwari [ Emp Id: U43779 ]
  * @author Domenic Denicola
  *
  * @website https://github.com/Mindspace/jasmine-as-promised

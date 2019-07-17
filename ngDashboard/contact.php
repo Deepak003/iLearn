@@ -12,7 +12,7 @@
 
     
     /* Set e-mail recipient */
-$myemail  = "Deepak.k@gmail.com";
+$myemail  = "Manu.k@gmail.com";
 
 
 $subject="Message From your Dashboard";

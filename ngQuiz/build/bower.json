@@ -1,9 +1,9 @@
 {
   "name": "Quizzler",
   "version": "0.0.1",
-  "homepage": "https://github.com/Deepak003/iLearn.git",
+  "homepage": "https://github.com/Manu003/iLearn.git",
   "authors": [
-    "Deepak Tiwari [ Emp Id: U43779 ] <deepak.tiwari@ust-global.com>"
+    "Manu Tiwari [ Emp Id: U43779 ] <Manu.tiwari@ust-global.com>"
   ],
   "description": "Dynamic Online-Quiz application using AngularJS HTML5",
   "main": "index.html",

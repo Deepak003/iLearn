@@ -1,5 +1,5 @@
 ﻿/*==========================================================
-    Author      : Deepak Tiwari
+    Author      : Manu Tiwari
     Date Created: 13 Jan 2017
     Description : Controller to handle Websites page
     Change Log
@@ -17,7 +17,7 @@ function ($http,$rootScope, $scope, $state,$window, $location, dashboardService,
 		//obj1.push(_objCourse);
 	});
     console.log("userName:"+$rootScope.userName);
-	if($rootScope.userName=="Deepak"){
+	if($rootScope.userName=="Manu"){
 		vm.courses = [
 			{
 				name: "AngularJS",

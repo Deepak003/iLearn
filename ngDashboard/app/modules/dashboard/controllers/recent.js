@@ -1,5 +1,5 @@
 ﻿/*==========================================================
-    Author      : Deepak Tiwari
+    Author      : Manu Tiwari
     Date Created: 13 Jan 2017
     Description : Controller to handle Recent Projects page
     Change Log
@@ -78,7 +78,7 @@ function ($rootScope, $scope, $state, $location, dashboardService, Flash) {
           description: "Angular Bootstrap Dashboard is a web dashboard application based on Bootstrap and AngularJS.",
           image: "dashboard",
           theme: "success",
-          url: "dashboard.Deepak.in",
+          url: "dashboard.Manu.in",
           roles: [
               {
                   theme: "success",

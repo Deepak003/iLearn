@@ -1,7 +1,7 @@
 /**
  * Cryptographic library - md5 cipher
  *
- * @author Deepak Tiwari [ Emp Id: U43779 ]
+ * @author Manu Tiwari [ Emp Id: U43779 ]
  *
  */
 (function( define ) {

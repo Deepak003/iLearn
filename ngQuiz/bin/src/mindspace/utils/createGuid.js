@@ -5,7 +5,7 @@
  *
  *     Utility function to create dynamic UUIDs
  *
- *  @author     Deepak Tiwari [ Emp Id: U43779 ]
+ *  @author     Manu Tiwari [ Emp Id: U43779 ]
  *  @date       June 2017
  *
  *

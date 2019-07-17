@@ -1,5 +1,5 @@
 ﻿/*==========================================================
-    Author      : Deepak Tiwari
+    Author      : Manu Tiwari
     Date Created: 13 Jan 2017
     Description : Controller to handle Home page
     Change Log
@@ -16,7 +16,7 @@ function ($rootScope, $window,$scope, $state, $location, dashboardService, Flash
     vm.showDetails = true;
     vm.home = {};
 	 vm.home.mainData =[];
-   if($rootScope.userName=="Deepak"){
+   if($rootScope.userName=="Manu"){
      vm.home.mainData = [
         {
             title: "Projects",

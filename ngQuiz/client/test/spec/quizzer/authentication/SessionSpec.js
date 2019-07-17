@@ -2,7 +2,7 @@
  * Jasmine Tests for the Session model
  * Note: Angular-mocks provides `module`, `inject` global methods
  *
- * @author Deepak Tiwari [ Emp Id: U43779 ]
+ * @author Manu Tiwari [ Emp Id: U43779 ]
  *
  */
 (function( define, describe ){
@@ -84,17 +84,17 @@
             {
                 angular.extend( session,  {
                     account : {
-                        userName  : 'Deepak Tiwari [ Emp Id: U43779 ]',
+                        userName  : 'Manu Tiwari [ Emp Id: U43779 ]',
                         email     : 'siriusxm'
                     },
                     sessionID        : 'AD3214'
                 });
 
-                expect( session.account.userName ) .toEqual( 'Deepak Tiwari [ Emp Id: U43779 ]' );
+                expect( session.account.userName ) .toEqual( 'Manu Tiwari [ Emp Id: U43779 ]' );
 
                 session.clear( );
 
-                expect( session.account.userName ) .toEqual( 'Deepak Tiwari [ Emp Id: U43779 ]' );
+                expect( session.account.userName ) .toEqual( 'Manu Tiwari [ Emp Id: U43779 ]' );
                 expect( session.account.email )    .toEqual( '' );
                 expect( session.sessionID )        .toBeNull( );
             }));
@@ -106,7 +106,7 @@
             {
                 angular.extend( session,  {
                     account     : {
-                        userName : 'Deepak Tiwari [ Emp Id: U43779 ]',
+                        userName : 'Manu Tiwari [ Emp Id: U43779 ]',
                         email    : 'ThomasBurleson@gmail.com'
                     },
                     sessionID   : '113344',

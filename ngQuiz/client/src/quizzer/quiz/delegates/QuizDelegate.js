@@ -5,7 +5,7 @@
  *
  *   Data service proxy to QuizDelegate API that loads Quiz JSON data and builds quiz instances
  *
- *  @author     Deepak Tiwari [ Emp Id: U43779 ]
+ *  @author     Manu Tiwari [ Emp Id: U43779 ]
  *  @date       June 2017
  *
  *

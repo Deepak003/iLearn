@@ -2,7 +2,7 @@
  *  Use aysnc script loader, configure the application module (for AngularJS)
  *  and initialize the application ( which configures routing )
  *
- *  @author Deepak Tiwari [ Emp Id: U43779 ]
+ *  @author Manu Tiwari [ Emp Id: U43779 ]
  */
 
  (function( window, head ) {

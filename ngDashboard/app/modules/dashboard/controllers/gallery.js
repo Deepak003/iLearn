@@ -1,5 +1,5 @@
 ﻿/*==========================================================
-    Author      : Deepak Tiwari
+    Author      : Manu Tiwari
     Date Created: 13 Jan 2017
     Description : Controller to handle Gallery page
     Change Log
@@ -21,10 +21,10 @@ function ($rootScope, $scope, $state, $location, dashboardService, Flash) {
                   // table.setCell('[movie-name]', '[user]', [score]);
 				  
 				  
-                table.setCell('AngularJS', 'Deepak', 5);
-                table.setCell('DataStructures', 'Deepak', 4);
-                table.setCell('Java', 'Deepak', 3);
-                table.setCell('Oracle', 'Deepak', 5);
+                table.setCell('AngularJS', 'Manu', 5);
+                table.setCell('DataStructures', 'Manu', 4);
+                table.setCell('Java', 'Manu', 3);
+                table.setCell('Oracle', 'Manu', 5);
                 table.setCell('React', 'Purushottam', 5);
                 table.setCell('Handlebars', 'Purushottam', 4);
                 table.setCell('AngularJS', 'Purushottam', 4);

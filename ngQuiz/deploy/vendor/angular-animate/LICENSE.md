@@ -1,4 +1,4 @@
-UST Global Inc
+Manu Inc
 
 Copyright (c) 2016 Angular
 

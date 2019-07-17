@@ -1,16 +1,16 @@
 {
-  "author": "Deepak Tiwari [ Emp Id: U43779 ] <deepak.tiwari@ust-global.com>",
+  "author": "Manu Tiwari [ Emp Id: U43779 ] <Manu.tiwari@ust-global.com>",
   "name": "Quizzler",
   "version": "0.0.2",
   "homepage": "http://ust-global.com/",
   "bugs": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Deepak003/iLearn.git"
+    "url": "https://github.com/Manu003/iLearn.git"
   },
   "licenses": {
     "type": "GPL",
-    "url": "https://github.com/Deepak003/iLearn.git"
+    "url": "https://github.com/Manu003/iLearn.git"
   },
   "dependencies": {
     "http-server": "^0.10.0",

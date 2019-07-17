@@ -1,5 +1,5 @@
 /**
- * @author      Deepak Tiwari [ Emp Id: U43779 ]
+ * @author      Manu Tiwari [ Emp Id: U43779 ]
  * @date        June 2017
  * @description
  *
@@ -8,14 +8,14 @@
  *  Usages:
  *
  *      var user = {
- *              first : "Deepak",
+ *              first : "Manu",
  *              last  : "Tiwari",
  *              address : {
  *                  city : "Bangalore",
  *                  state: "Karnataka"
  *              },
  *              contact : {
- *                  email : "deepak.tiwari@ust-global.com"
+ *                  email : "Manu.tiwari@ust-global.com"
  *                  url   : "http://www.ust-global.com"
  *              }
  *          },
@@ -24,7 +24,7 @@
  *     return supplant( message, user );
  *
  *
- * @author Deepak Tiwari [ Emp Id: U43779 ]
+ * @author Manu Tiwari [ Emp Id: U43779 ]
  *
  */
 (function( define ) {

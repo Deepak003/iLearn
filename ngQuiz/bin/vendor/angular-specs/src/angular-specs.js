@@ -4,7 +4,7 @@
  * This is essentially the angular-mocks.js code with all the decorators
  * for $timeout, $browser, and $httpBackend REMOVED.
  *
- * @author  Deepak Tiwari [ Emp Id: U43779 ]
+ * @author  Manu Tiwari [ Emp Id: U43779 ]
  * @date    September, 2013
  * @url     https://github.com/Mindspace/bower-angular-specs
  *

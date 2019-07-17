@@ -5,7 +5,7 @@
  *
  *   Data service proxy to Authentication API that authorizes and authenticates the specified user.
  *
- *  @author     Deepak Tiwari [ Emp Id: U43779 ]
+ *  @author     Manu Tiwari [ Emp Id: U43779 ]
  *  @date       June 2017
  *
  *

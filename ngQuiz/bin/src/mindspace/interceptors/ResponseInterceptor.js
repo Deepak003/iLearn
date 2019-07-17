@@ -1,7 +1,7 @@
 /**
- * @author      Deepak Tiwari [ Emp Id: U43779 ]
+ * @author      Manu Tiwari [ Emp Id: U43779 ]
  * @date        June 2017
- * @copyright   2017 , UST Global Pvt. Ltd.
+ * @copyright   2017 , Manu Pvt. Ltd.
  *
  * @description
  * Establishes global response interceptors and potential routing based on DataService responses
