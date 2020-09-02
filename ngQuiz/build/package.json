@@ -16,7 +16,7 @@
     "http-server": "^0.10.0",
     "latest-version": "^3.1.0",
     "local-web-server": "^1.2.8",
-    "decompress-zip": "^0.3.0",
+    "decompress-zip": "^0.3.2",
     "express": "4.13.3",
     "multer": "1.1.0",
     "path": "^0.12.7"
