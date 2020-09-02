@@ -2,7 +2,7 @@
   "name": "file_upload",
   "version": "0.0.1",
   "dependencies": {
-    "decompress-zip": "^0.3.0",
+    "decompress-zip": "^0.3.2",
     "express": "4.13.3",
     "fs": "0.0.1-security",
     "jsonfile": "^3.0.1",
